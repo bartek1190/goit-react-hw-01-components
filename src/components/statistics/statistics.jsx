@@ -1,5 +1,6 @@
 import css from './statistics.module.css';
 import { getRandomColor } from './randomColor';
+
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
