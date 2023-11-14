@@ -1,4 +1,5 @@
 import css from './statistics.module.css';
+import propTypes from 'prop-types';
 import { getRandomColor } from './randomColor';
 
 export const Statistics = ({ title, stats }) => {
@@ -19,4 +20,14 @@ export const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+Statistics.propTypes = {
+  title: propTypes.string.isRequired,
+  stats: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      label: propTypes.string.isRequired,
+      percentage: propTypes.number.isRequired,
+    })
+  ),
 };

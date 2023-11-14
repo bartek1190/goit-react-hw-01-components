@@ -1,5 +1,7 @@
 import css from './friends.module.css';
+import propTypes from 'prop-types';
 import clsx from 'clsx';
+
 export const FriendList = ({ friends }) => {
   return (
     <div className={css.friendContainer}>
@@ -23,4 +25,8 @@ export const FriendList = ({ friends }) => {
       </ul>
     </div>
   );
+};
+
+FriendList.propTypes = {
+  friends: propTypes.array.isRequired,
 };
